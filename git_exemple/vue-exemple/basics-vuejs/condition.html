@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue.js</title>
+    <script src="https://unpkg.com/vue@3.2.29"></script>
+</head>
+<body>
+    
+    <main>
+        <div id='app'>
+            <!-- v-if pour les condition et v-if et v-show presque le meme mais en respect v-if is invalid n'est pa interpreter mais v-show n'est pas une conditionil interpreter est en display-none -->
+            <!-- template est un simple conteneur  -->
+            <p v-if="isActive">server is up</p>
+            <p v-else="isActive">server is DOWN</p>
+            <p v-show="isActive">Access server</p>
+       
+        <template v-if="isActive">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet officia earum, ratione ut doloremque architecto sapiente veritatis commodi quibusdam fuga cupiditate eos deleniti nostrum voluptates ipsa soluta eligendi. Optio, excepturi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet officia earum, ratione ut doloremque architecto sapiente veritatis commodi quibusdam fuga cupiditate eos deleniti nostrum voluptates ipsa soluta eligendi. Optio, excepturi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet officia earum, ratione ut doloremque architecto sapiente veritatis commodi quibusdam fuga cupiditate eos deleniti nostrum voluptates ipsa soluta eligendi. Optio, excepturi.</p>
+        </template>
+    </div>
+    </main>
+    <script>
+        const app=Vue.createApp({
+            data(){
+                return{
+                    isActive: true,
+                }
+            }
+        })
+        app.mount('#app');    
+    </script>
+    
+</body>
+</html>
