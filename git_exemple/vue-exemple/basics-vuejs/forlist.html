@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue.js</title>
+    <script src="https://unpkg.com/vue@3.2.29"></script>
+</head>
+<body>
+    
+    <main>
+        <div id='app'>
+          
+          <ul><li v-for="(skill,ind) in skills"></li></ul>
+        </div>
+    </main>
+    <script>
+        const app=Vue.createApp({
+            data(){
+                return{
+                    skills: ['HTML', 'CSS', 'PHP', 'JS']
+                }
+            }
+        })
+        app.mount('#app');    
+    </script>
+    
+</body>
+</html>
